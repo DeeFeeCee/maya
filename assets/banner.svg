@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220">
+  <defs>
+    <!-- Space gradient background -->
+    <linearGradient id="spaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0d1f3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Cyan glow gradient -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ffcc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Engine glow gradient -->
+    <radialGradient id="engineGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0088ff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0044aa;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Orange engine glow -->
+    <radialGradient id="orangeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffaa00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6600;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ff3300;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Text glow filter -->
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Strong glow filter -->
+    <filter id="strongGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Star pattern -->
+    <pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="20" r="1" fill="white" opacity="0.8"/>
+      <circle cx="45" cy="10" r="0.5" fill="white" opacity="0.6"/>
+      <circle cx="80" cy="35" r="1.2" fill="white" opacity="0.9"/>
+      <circle cx="25" cy="60" r="0.8" fill="white" opacity="0.5"/>
+      <circle cx="70" cy="75" r="0.6" fill="white" opacity="0.7"/>
+      <circle cx="90" cy="90" r="1" fill="white" opacity="0.4"/>
+      <circle cx="5" cy="85" r="0.7" fill="white" opacity="0.6"/>
+      <circle cx="55" cy="50" r="0.4" fill="white" opacity="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="220" fill="url(#spaceGradient)" rx="12"/>
+  
+  <!-- Stars overlay -->
+  <rect width="800" height="220" fill="url(#stars)" rx="12" opacity="0.6"/>
+  
+  <!-- Distant nebula effect -->
+  <ellipse cx="650" cy="60" rx="120" ry="40" fill="#4400aa" opacity="0.15"/>
+  <ellipse cx="150" cy="180" rx="80" ry="30" fill="#00aaff" opacity="0.1"/>
+  
+  <!-- === STARSHIP 1 (Main - Federation style) === -->
+  <g transform="translate(580, 85) rotate(-15)">
+    <!-- Engine trails -->
+    <ellipse cx="-35" cy="0" rx="25" ry="6" fill="url(#engineGlow)" opacity="0.8"/>
+    <ellipse cx="-35" cy="12" rx="20" ry="5" fill="url(#engineGlow)" opacity="0.6"/>
+    <ellipse cx="-35" cy="-12" rx="20" ry="5" fill="url(#engineGlow)" opacity="0.6"/>
+    
+    <!-- Hull body -->
+    <path d="M-20,-8 L50,0 L-20,8 L-25,5 L-25,-5 Z" fill="#8899aa" stroke="#aabbcc" stroke-width="1"/>
+    
+    <!-- Cockpit -->
+    <ellipse cx="30" cy="0" rx="12" ry="4" fill="#224466" stroke="#00aaff" stroke-width="0.5"/>
+    
+    <!-- Wings -->
+    <path d="M-5,-8 L15,-25 L25,-20 L10,-8 Z" fill="#667788" stroke="#889999" stroke-width="0.5"/>
+    <path d="M-5,8 L15,25 L25,20 L10,8 Z" fill="#667788" stroke="#889999" stroke-width="0.5"/>
+    
+    <!-- Engine pods -->
+    <ellipse cx="-20" cy="12" rx="8" ry="4" fill="#556677"/>
+    <ellipse cx="-20" cy="-12" rx="8" ry="4" fill="#556677"/>
+    <circle cx="-25" cy="12" r="3" fill="#00ffff" filter="url(#strongGlow)"/>
+    <circle cx="-25" cy="-12" r="3" fill="#00ffff" filter="url(#strongGlow)"/>
+    <circle cx="-25" cy="0" r="4" fill="#00ffff" filter="url(#strongGlow)"/>
+  </g>
+  
+  <!-- === STARSHIP 2 (Small - Racing style) === -->
+  <g transform="translate(720, 45) rotate(-10) scale(0.6)">
+    <!-- Engine trail -->
+    <ellipse cx="-30" cy="0" rx="20" ry="4" fill="url(#orangeGlow)" opacity="0.9"/>
+    
+    <!-- Sleek hull -->
+    <path d="M-15,-5 L45,0 L-15,5 Z" fill="#ffffff" stroke="#ffaa00" stroke-width="1"/>
+    
+    <!-- Cockpit -->
+    <ellipse cx="20" cy="0" rx="8" ry="3" fill="#333333"/>
+    
+    <!-- Engine -->
+    <circle cx="-18" cy="0" r="4" fill="#ffaa00" filter="url(#strongGlow)"/>
+  </g>
+  
+  <!-- === STARSHIP 3 (Background - Empire style) === -->
+  <g transform="translate(100, 50) rotate(25) scale(0.5)">
+    <!-- Engine trail -->
+    <ellipse cx="-25" cy="0" rx="15" ry="3" fill="#ff4444" opacity="0.6"/>
+    
+    <!-- Dark hull -->
+    <path d="M-15,-6 L35,0 L-15,6 L-18,4 L-18,-4 Z" fill="#334455" stroke="#445566" stroke-width="1"/>
+    
+    <!-- Wings (TIE style) -->
+    <rect x="-10" y="-25" width="3" height="50" fill="#223344"/>
+    
+    <!-- Engine -->
+    <circle cx="-20" cy="0" r="3" fill="#ff6666" filter="url(#strongGlow)"/>
+  </g>
+  
+  <!-- === MAIN TEXT === -->
+  
+  <!-- "MAYA" text -->
+  <text x="60" y="95" font-family="Arial Black, Helvetica, sans-serif" font-size="58" font-weight="900" fill="url(#cyanGlow)" filter="url(#textGlow)">
+    MAYA
+  </text>
+  
+  <!-- "PYTHON" text -->
+  <text x="235" y="95" font-family="Arial Black, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#ffffff" opacity="0.95">
+    PYTHON
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="60" y="125" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#88aacc" letter-spacing="2">
+    STARSHIP GENERATORS • 3D TEXT • PROCEDURAL TOOLS
+  </text>
+  
+  <!-- Tagline -->
+  <text x="60" y="150" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#6688aa" font-style="italic">
+    Learning Maya scripting through creative projects
+  </text>
+  
+  <!-- Decorative line -->
+  <line x1="60" y1="160" x2="450" y2="160" stroke="url(#cyanGlow)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- === BADGES === -->
+  <g transform="translate(60, 175)">
+    <!-- Maya badge -->
+    <rect x="0" y="0" width="75" height="24" rx="4" fill="#00838f"/>
+    <text x="37" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Maya</text>
+    
+    <!-- Python badge -->
+    <rect x="85" y="0" width="80" height="24" rx="4" fill="#3776ab"/>
+    <text x="125" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Python</text>
+    
+    <!-- Procedural badge -->
+    <rect x="175" y="0" width="95" height="24" rx="4" fill="#7b1fa2"/>
+    <text x="222" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Procedural</text>
+    
+    <!-- Learning badge -->
+    <rect x="280" y="0" width="85" height="24" rx="4" fill="#388e3c"/>
+    <text x="322" y="16" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Learning</text>
+  </g>
+  
+  <!-- Corner accent -->
+  <path d="M0,12 L0,0 L12,0" fill="none" stroke="url(#cyanGlow)" stroke-width="3" transform="translate(10,10)" opacity="0.6"/>
+  <path d="M0,-12 L0,0 L-12,0" fill="none" stroke="url(#cyanGlow)" stroke-width="3" transform="translate(790,210)" opacity="0.6"/>
+</svg>
