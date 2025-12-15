@@ -39,6 +39,8 @@ maya/
 ├── 📂 launchers/            # Easy-to-use launcher scripts
 │   ├── RUN_STARSHIP_V1.py   # Starship V1 launcher
 │   ├── RUN_STARSHIP_V2.py   # Starship V2 launcher
+│   ├── RUN_STARWARS_FLEET.py # ⭐ Star Wars Fleet launcher
+│   ├── RUN_MINECRAFT.py     # 🟫 Minecraft Characters launcher
 │   ├── RUN_3D_TEXT.py       # 3D Text V2 launcher
 │   ├── RUN_3D_TEXT_V1.py    # 3D Text V1 launcher
 │   ├── RUN_FONT_DIAGNOSTIC.py # Font troubleshooting
@@ -46,6 +48,8 @@ maya/
 ├── 📂 scripts/              # Main Python scripts
 │   ├── starship.py          # Starship Generator V1
 │   ├── starship_v2.py       # Starship Generator V2 (Advanced)
+│   ├── starwars_fleet.py    # ⭐ Star Wars Inspired Fleet Generator
+│   ├── minecraft_characters.py # 🟫 Minecraft Character Generator
 │   ├── fancy_3d_text.py     # 3D Text V1 (textCurves)
 │   ├── fancy_3d_text_v2.py  # 3D Text V2 (Type tool)
 │   └── font_diagnostic.py   # Font troubleshooting utility
@@ -232,6 +236,130 @@ starship_v2.create_squadron(3, "racer", "racer", "line")
 
 # Open the UI
 starship_v2.show_ui()
+```
+
+---
+
+### ⭐ Star Wars Fleet Generator (`scripts/starwars_fleet.py`)
+
+Create iconic Star Wars-inspired starships and fleets!
+
+**Quick Start:**
+```python
+exec(open(r"C:\Development\maya\launchers\RUN_STARWARS_FLEET.py").read())
+```
+
+**Functions:**
+
+| Function | Description |
+|----------|-------------|
+| `create_ship(ship_type, name, scale, position)` | Create a single iconic ship |
+| `create_fleet(faction, count, formation)` | Create a faction fleet |
+| `show_ui()` | Open the Star Wars UI |
+
+**Available Ships:**
+
+| Ship | Faction | Description |
+|------|---------|-------------|
+| 🔴 `xwing` | Rebel | X-Wing Fighter with S-foils |
+| 🟡 `ywing` | Rebel | Y-Wing Bomber with exposed engines |
+| 🔴 `awing` | Rebel | A-Wing Interceptor (fast & red) |
+| ⚪ `falcon` | Rebel | Light Freighter (YT-1300 style) |
+| ⬛ `tie` | Imperial | TIE Fighter with hexagonal wings |
+| ⬛ `interceptor` | Imperial | TIE Interceptor with dagger wings |
+| ⬜ `shuttle` | Imperial | Lambda-class with folding wings |
+| 🟢 `slave1` | Bounty Hunter | Firespray Gunship |
+
+**Fleet Formations:**
+
+| Formation | Description |
+|-----------|-------------|
+| `attack` | V-formation (lead ship at front) |
+| `patrol` | Horizontal line |
+| `escort` | Diamond pattern around center |
+
+**Examples:**
+```python
+import starwars_fleet
+
+# Create individual ships
+starwars_fleet.create_ship("xwing")
+starwars_fleet.create_ship("tie", scale=1.5)
+starwars_fleet.create_ship("falcon", position=(10, 0, 0))
+
+# Create fleets
+starwars_fleet.create_fleet("rebel", count=5, formation="attack")
+starwars_fleet.create_fleet("imperial", count=8, formation="patrol")
+
+# Epic battle scene!
+starwars_fleet.create_fleet("rebel", count=5)
+starwars_fleet.create_fleet("imperial", count=7)
+
+# Open the UI
+starwars_fleet.show_ui()
+```
+
+---
+
+### 🟫 Minecraft Character Generator (`scripts/minecraft_characters.py`)
+
+Create blocky voxel-style Minecraft characters with equipment and poses!
+
+**Quick Start:**
+```python
+exec(open(r"C:\Development\maya\launchers\RUN_MINECRAFT.py").read())
+```
+
+**Functions:**
+
+| Function | Description |
+|----------|-------------|
+| `create_character(char_type, name, scale, pose, held_item, armor)` | Create any character |
+| `create_village(character_count, radius)` | Create a village scene |
+| `create_mob_horde(mob_type, count, formation)` | Create hostile mob group |
+| `show_ui()` | Open the character generator UI |
+
+**Available Characters:**
+
+| Character | Type | Description |
+|-----------|------|-------------|
+| 👤 `steve` | Player | Classic player - cyan shirt, blue jeans |
+| 👩 `alex` | Player | Alternate player - green shirt, orange hair |
+| 🧟 `zombie` | Hostile | Green undead mob |
+| 💀 `skeleton` | Hostile | Bone archer (give it a bow!) |
+| 💚 `creeper` | Hostile | Explosive green mob with iconic face |
+| 👁️ `enderman` | Hostile | Tall dark mob with purple eyes |
+| 🧙 `witch` | Hostile | Purple-robed with pointy hat |
+| 👃 `villager` | Friendly | NPC trader with big nose |
+| 🐷 `pigman` | Neutral | Zombie Piglin from the Nether |
+| 🤖 `iron_golem` | Friendly | Large village protector |
+
+**Equipment Options:**
+
+| Category | Options |
+|----------|---------|
+| **Poses** | `standing`, `walking`, `wave`, `zombie` |
+| **Held Items** | `sword` (diamond), `pickaxe` (iron), `bow` |
+| **Armor** | `leather`, `chainmail`, `iron`, `gold`, `diamond`, `netherite` |
+
+**Examples:**
+```python
+import minecraft_characters
+
+# Create characters
+minecraft_characters.create_character("steve")
+minecraft_characters.create_character("alex", pose="wave")
+minecraft_characters.create_character("zombie", pose="zombie")
+minecraft_characters.create_character("skeleton", held_item="bow")
+minecraft_characters.create_character("steve", armor="diamond", held_item="sword")
+
+# Create groups
+minecraft_characters.create_village(8)  # 8 characters in a circle
+minecraft_characters.create_mob_horde("zombie", count=10)  # Zombie swarm!
+minecraft_characters.create_mob_horde("creeper", count=6, formation="ambush")
+
+# Open the UI
+minecraft_characters.show_ui()
 ```
 
 ---

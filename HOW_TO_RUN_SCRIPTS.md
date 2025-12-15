@@ -32,6 +32,8 @@ The easiest way! Use the pre-made launcher scripts in the `launchers/` folder.
 |----------|-------------|
 | `RUN_STARSHIP_V1.py` | Starship Generator V1 - Classic edition |
 | `RUN_STARSHIP_V2.py` | Starship Generator V2 - Advanced with squadrons |
+| `RUN_STARWARS_FLEET.py` | ⭐ Star Wars Fleet Generator - X-Wings, TIEs & more! |
+| `RUN_MINECRAFT.py` | 🟫 Minecraft Characters - Steve, Creeper & more! |
 | `RUN_3D_TEXT.py` | 3D Text Generator V2 - Type tool version |
 | `RUN_3D_TEXT_V1.py` | 3D Text Generator V1 - textCurves version |
 | `RUN_FONT_DIAGNOSTIC.py` | Font troubleshooting utility |
@@ -195,6 +197,40 @@ exec(open(r"C:\Development\maya\launchers\RUN_STARSHIP_V2.py").read())
 **Ship Classes:** `interceptor`, `heavy_fighter`, `racer`
 **Formations:** `v`, `line`, `diamond`, `echelon`
 **Animation Styles:** `hover`, `flyby`, `banking`
+
+### ⭐ Star Wars Fleet Generator (`scripts/starwars_fleet.py`)
+
+```python
+exec(open(r"C:\Development\maya\launchers\RUN_STARWARS_FLEET.py").read())
+```
+
+| Function | Description |
+|----------|-------------|
+| `create_ship(ship_type, name, scale, position)` | Create iconic ships |
+| `create_fleet(faction, count, formation)` | Create faction fleets |
+| `show_ui()` | Open the Star Wars UI |
+
+**Ship Types:** `xwing`, `tie`, `ywing`, `awing`, `falcon`, `shuttle`, `interceptor`, `slave1`
+**Factions:** `rebel`, `imperial`, `mixed`, `bounty_hunter`
+**Formations:** `attack` (V), `patrol` (line), `escort` (diamond)
+
+### 🟫 Minecraft Characters (`scripts/minecraft_characters.py`)
+
+```python
+exec(open(r"C:\Development\maya\launchers\RUN_MINECRAFT.py").read())
+```
+
+| Function | Description |
+|----------|-------------|
+| `create_character(char_type, name, scale, pose, held_item, armor)` | Create any character |
+| `create_village(character_count, radius)` | Create village scene |
+| `create_mob_horde(mob_type, count, formation)` | Create hostile mob group |
+| `show_ui()` | Open the character generator UI |
+
+**Characters:** `steve`, `alex`, `zombie`, `skeleton`, `creeper`, `enderman`, `villager`, `pigman`, `witch`, `iron_golem`
+**Poses:** `standing`, `walking`, `wave`, `zombie`
+**Items:** `sword`, `pickaxe`, `bow`
+**Armor:** `leather`, `chainmail`, `iron`, `gold`, `diamond`, `netherite`
 
 ### ✨ 3D Text Generator (`scripts/fancy_3d_text_v2.py`)
 
